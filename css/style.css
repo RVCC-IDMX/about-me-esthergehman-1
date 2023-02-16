@@ -1,0 +1,32 @@
+body {
+    color: #045A5E;
+    background-color: #DB7835;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align:center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
+}
+
+header {
+    text-align:center;
+}
+
+#hero, footer {
+    text-align:center;
+    background-color: #8F4514;
+    color: #35D2DB;
+    padding:20px;
+    border:4px solid #35D2DB;
+}
+
+#hero img {
+    width:15vw;
+    max-width:500px;
+    min-width:100px;
+}
+
+#bio {
+    text-align:center;
+}
