@@ -96,7 +96,31 @@ a:hover{
 }
 
 #gallery img{
-    max-width:100%;
+    width:50vw;
+    max-width:640px;
+    min-width:100px;
+}
+
+/* Article style */
+
+#lit {
+    text-align:left;
+}
+
+#lit p:nth-child(odd)::first-letter{
+    clear: both;
+    color: white;
+    font-size: 230%;
+    padding: .5ex;
+    margin-right: .5ex;
+    font-weight: bold;
+    background-color: #8F4514;
+    background-origin: content-box;
+    text-shadow:5px 5px 5px rgba(0,0,0,.5);
+    box-shadow:3px 3px 3px rgba(0,0,0,.5);
+
+    float: left;
+    border: 5px double black;
 }
 
 
