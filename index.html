@@ -193,6 +193,72 @@
 
         </article>
 
+        <section id="video">
+            <h2>A Short Video:</h2>
+
+            <div id="videoWrapper">
+                <iframe id="myVideo" src="https://www.youtube.com/embed/R6sdXhMNrj8" title="Skinny Love - Bon Iver (Cover)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <h2>Reach Out!</h2>
+
+            <form method="get">
+
+                <fieldset>
+                    <legend>Contact Form</legend>
+
+                    <label for="name">Your Name:</label>
+                    <input id="name" name="name" type="text" required="true">
+
+                    <br>
+
+                    <label for="email">Your Email:</label>
+                    <input id="email" name="email" type="email" required="true">
+
+                    <br>
+
+                    <label for="phone">Your Phone:</label>
+                    <input id="phone" name="phone" type="tel">
+
+                    <br>
+
+                    <label for="type">Phone Type:</label>
+                    <select id="type" name="type">
+                        <option value="Home">Home</option>
+                        <option value="Cell">Cell</option>
+                        <option value="Work">Work</option>
+                    </select>
+
+                    <br>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>Contact Back?</legend>
+                        <input id="yes" name="contactback" type="radio" checked="true" value="yes">
+                        <label for="yes">Contact Me Back.</label>
+
+                        <br>
+
+                        <input id="no" name="contactback" type="radio" value="no">
+                        <label for="no">No Thanks.</label>
+                    </fieldset>
+                    
+                    <br>
+
+                    <button type="submit">Send Message</button>
+
+                </fieldset>
+            </form>
+
+        </section>
+
         <footer>
             © 2023 Esther Gehman
         </footer>
