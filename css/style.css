@@ -169,6 +169,9 @@ a:hover{
 }
 
 #contact fieldset{
+    display:grid;
+    margin-top:1ex;
+    margin-bottom:1ex;
     border: 2px solid #045A5E;
     padding:1em;
 }
@@ -181,18 +184,17 @@ a:hover{
     border-bottom-left-radius:1ex;
 }
 
-#contact fieldset{
-    display:grid;
-    margin-top:1ex;
-    margin-bottom:1ex;
-}
-
 #contact label{
     margin:1ex;
 }
 
 #contact fieldset fieldset{
     grid-template-columns:30px auto;
+}
+
+#contact button{
+    background-color:#045A5E;
+    color:white;
 }
 
 
