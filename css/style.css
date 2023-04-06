@@ -147,7 +147,7 @@ a:hover{
 #videoWrapper{
     position:relative;
     padding-bottom:56.25%;
-    border:5px solid white;
+    border:5px solid #045A5E;
     margin:50px;
 }
 
@@ -199,7 +199,7 @@ a:hover{
 }
 
 #contact button:hover{
-    background-color: #034c50;
+    background-color: #033437;
 }
 
 
