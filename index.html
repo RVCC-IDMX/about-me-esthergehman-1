@@ -18,23 +18,33 @@
 <body>
     <!-- the body element contains all content shown to the visitor-->
 
-    <header>
+    <header class="header">
         <!-- the header element shows the logo and page title (don't confuse for head tag)-->
+        <h1 class="name">Esther Gehman</h1>
 
         <nav class="navbar">
-            <div class="logo">
-                <img src="/img/logo-96X96.svg" alt="blue origami bird">
-                <h1>Web Dev 1 - About Me </h1>
+            <!--
+            <div class="cell">
+                <div class="site-info">
+                    <h1 class="name">Esther Gehman</h1>
+                </div>
             </div>
-            <div class="navbar-links">
-                <ul>
+            -->
+
+            <label class="label">
+                <input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
+                <span class="menu">
+                    <span class="hamburger"></span>
+                </span>
+
+                <ul class="navbar-list">
                     <li><a class="nav-links" href="#bio">Bio</a></li>
                     <li><a class="nav-links" href="#hobbies">Hobbies</a></li>
                     <li><a class="nav-links" href="#gallery">Gallery</a></li>
                     <li><a class="nav-links" href="#blog">Blog</a></li>
-                    <li><a class="nav-links" href="#contact">Contact Me</a></li>
+                    <li><a class="nav-links" href="#contact">Feedback</a></li>
                 </ul>
-            </div>
+            </label>
         </nav>
     </header>
 
@@ -46,8 +56,8 @@
             <img src="/img/avataaars.png" alt="girl wearing a blue sweatshirt (my avatar)" width="200">
 
             <div>
-                <p>Esther Gehman</p>
-                <p>Frenchtown, NJ</p>
+                <p id="heroName">Esther Gehman</p>
+                <p id="heroTown">Frenchtown, NJ</p>
                 <p><a href="https://www.tiktok.com/@esther_shredz?is_from_webapp=1&sender_device=pc"> Guitar Tiktok
                         Page</a> </p>
             </div>
@@ -217,7 +227,7 @@
         </section>
 
         <section id="contact">
-            <h2>Reach Out!</h2>
+            <h2>Contact Me!</h2>
 
             <form method="post" data-netlify="true">
 

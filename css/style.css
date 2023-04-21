@@ -1,6 +1,6 @@
 body {
-    color: #045A5E;
-    background-color: #DB7835;
+    color: #344E41;
+    background-color: #DAD7CD;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -8,17 +8,45 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Anton', sans-serif;
 }
 
-header {
+/* Norway Image Stuff */
+
+.header {
+    color: #344E41;
     text-align:center;
+    font-size:25px;
+    background:url("/img/norway-cropped.jpg") no-repeat center center fixed;
+    background-size:cover;
+    
+    display:flex;
+    flex-direction:column;
+
+    height:100vh;
+    width:100%;
+    background-position:left;
+    animation:move 100s ease-in-out infinite;
 }
+
+
+/*
+.header .cell {
+    display:table-cell;
+    vertical-align:top;
+}
+
+.header .site-info {
+    width:50%;
+    margin: 0 auto;
+}
+*/
+
 
 /* Hero and Footer Style */
 #hero, footer {
     text-align:center;
-    background-color: #8F4514;
-    color: #35D2DB;
+    background-color: #344E41;
+    color: #DAD7CD;
     padding:20px;
-    border:10px solid #045A5E;
+    border:10px solid #588157;
 }
 
 #hero img {
@@ -30,26 +58,20 @@ header {
     border-bottom:50px solid #FFF;
     background-clip:border-box;
 
-    background-color: #DB7835;
+    background-color: #A3B18A;
     border-radius:3vw;
     box-shadow: 15px 15px 5px rgba(0,0,0,.5) inset,
                 15px 15px 5px rgba(0,0,0,.5);
 }
 
-a{
-    color: #000;
+#hero a{
+    color: #DAD7CD;
 }
 
-a:active{
-    color: red;
-}
-
-a:visited{
-    color: white;
-}
-
-a:hover{
-    background-color: #000;
+#hero a:hover, #hero a:active{
+    padding:0.5rem;
+    background-color:#588157;
+    border-radius:10px;
 }
 
 /* Bio Style */
@@ -78,15 +100,10 @@ a:hover{
 }
 **/
 
-#hobbies ul li:nth-child(odd){
-    color:#8F4514;
-}
-
-
 /* Photo Gallery Style */
 
 #gallery{
-    border:10px solid #045A5E;
+    border:10px solid #588157;
     text-align:center;
 }
 
@@ -108,28 +125,28 @@ a:hover{
 
 
 #lyrics {
-    border:10px solid #045A5E;
+    border:10px solid #588157;
     text-align:center;
     display:flex;
     flex-direction:column;
     align-items:center;
 }
 
-/* Article style */
+/* Blog style */
 
-#lit {
+#blog {
     text-align:left;
     margin:3em;
 }
 
-#lit p:nth-child(odd)::first-letter{
+#blog p:nth-child(odd)::first-letter{
     clear: both;
     color: white;
     font-size: 230%;
     padding: .5ex;
     margin-right: .5ex;
     font-weight: bold;
-    background-color: #8F4514;
+    background-color: #344E41;
     background-origin: content-box;
     text-shadow:5px 5px 5px rgba(0,0,0,.5);
     box-shadow:3px 3px 3px rgba(0,0,0,.5);
@@ -147,7 +164,7 @@ a:hover{
 #videoWrapper{
     position:relative;
     padding-bottom:56.25%;
-    border:5px solid #045A5E;
+    border:5px solid #588157;
     margin:50px;
 }
 
@@ -173,12 +190,12 @@ a:hover{
     display:grid;
     margin-top:1ex;
     margin-bottom:1ex;
-    border: 2px solid #045A5E;
+    border: 2px solid #344E41;
     padding:1em;
 }
 
 #contact legend{
-    background-color:#045A5E;
+    background-color:#344E41;
     color:white;
     padding:1ex;
     border-bottom-right-radius:1ex;
@@ -194,12 +211,13 @@ a:hover{
 }
 
 #contact button{
-    background-color:#045A5E;
+    background-color:#344E41;
     color:white;
 }
 
 #contact button:hover{
-    background-color: #033437;
+    cursor:pointer;
+    background-color: #283b32;
 }
 
 
@@ -241,5 +259,20 @@ a:hover{
     }
     #lyrics h3, h4{
         grid-column:1/-1;
+    }
+}
+
+/* KEY FRAMES */
+
+@keyframes move{
+    0%{
+        background-position:left;
+    }
+    50%{
+        background-position:right;
+    }
+    100%{
+        background-position:left;
+
     }
 }

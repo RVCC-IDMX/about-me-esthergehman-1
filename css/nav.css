@@ -1,6 +1,6 @@
 /* make scrolling smooth */
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -9,54 +9,64 @@ html {
 */
 
 body {
-    box-sizing:border-box;
-    padding:0px;
-    margin:0px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* add some padding back to rest of page */
 
 main {
-    padding:2vw;
+    padding: 2vw;
 }
 
 /* navbar */
 
 .navbar {
-    background-color:#8F4514;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    margin-bottom:1rem;
+    color: #344E41;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
 
+/* CHECK */
 
-/* logo */
 
-.logo {
-    display:flex;
-    align-items:center;
-}
+.navbar-list {
 
-.logo img {
-    height:6vw;
-    width:6vw;
-}
+    width: 70%;
+    height: 75vh;
 
-.logo h1 {
-    font-size:1.2em;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 25vh;
+
+    margin: 0 auto 0;
+
+    background-color: rgba(52, 78, 65, 0);
+
+    z-index: 200;
+    position: absolute;
+    list-style: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.25s 0.25 ease-in-out;
 }
 
 /* navigation list */
 
-.navbar-links ul {
-    padding-left:0px;
-}
-
-.navbar-links li {
-    list-style:none;
-    display:block;
-    padding:0.5em 0px;
+.nav-links {
+    margin-bottom: 1em;
+    display: block;
+    color: #DAD7CD;
+    text-decoration: none;
+    background-color: #344E41;
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+    letter-spacing: 2px;
 }
 
 /*  
@@ -64,19 +74,88 @@ main {
  and then on hover
 */
 
-.navbar-links a {
-    color:white;
-    background-color:#8F4514;
-    font-size:1.5rem;
-    padding:1rem 1.25rem;
-    letter-spacing:2px;
-    text-decoration:none;
-    display:inline-block;
+
+.navbar-list a:hover, .navbar-list a:focus {
+    background-color: #588157;
+    border-radius: 10px;
 }
 
-.navbar-links a:hover, .navbar-links a:focus {
-    background-color:#045A5E;
-    border-radius:10px;
+/*
+TEST
+*/
+
+.menu {
+    position: absolute;
+    right: 0px;
+    top: -110px;
+    z-index: 100;
+    width: 70px;
+    height: 171px;
+    background: #344E41;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 0 0 #344E41, 0 0 0 0 #344E41;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: absolute;
+    top: 135px;
+    left: 20px;
+    width: 30px;
+    height: 2px;
+    background: #FFF;
+    display: block;
+    transform-origin: center;
+    transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after, label .hamburger:before {
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+
+label .hamburger:before {
+    top: -10px;
+}
+
+label .hamburger:after {
+    bottom: -10px;
+}
+
+label input {
+    display: none;
+}
+
+label input:checked + .menu {
+    /* 
+    box-shadow: 0 0 0 100vh rgba(218, 215, 205);
+    border-radius: 0;
+    */
+}
+
+label input:checked + .menu .hamburger {
+    transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+label input:checked + .menu + .navbar-list {
+    visibility: visible;
+    transition-delay: 0.25s;
+    transition-property: visibility;
 }
 
 
@@ -88,12 +167,26 @@ such that no text wraps
 
 @media screen and (min-width:1000px) {
     .navbar {
-        flex-direction:row;
-        justify-content:space-between;
+        height: 100vh;
+        margin-bottom: 0;
     }
 
-    .navbar ul {
-        display:flex;
-        justify-content:space-between;
+    .navbar-list{
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        top: 20vh;
+        width: 100vw;
+        height: 60.8px;
+        padding: 0;
+    }
+
+    .nav-links {
+        margin: 0 15px 0;
+    }
+
+    .menu {
+        display: none;
     }
 }
