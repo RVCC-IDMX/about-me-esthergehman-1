@@ -6,28 +6,48 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Anton', sans-serif;
+    font-weight: lighter;
+    text-align:center;
 }
 
 /* Norway Image Stuff */
 
 .header {
     color: #344E41;
-    text-align:center;
-    font-size:25px;
+    font-size: 1.75rem;
     background:url("/img/norway-cropped.jpg") no-repeat center center fixed;
     background-size:cover;
     
     display:flex;
     flex-direction:column;
 
-    height:100vh;
-    width:100%;
+    height: 100vh;
+    width: 100%;
     background-position:left;
     animation:move 100s ease-in-out infinite;
+    text-align: center;
+    white-space: nowrap;
 }
 
+.name {
+    margin: 80px 20px 0px;
+}
 
 /*
+.name {
+    margin: 80px 20px 0px;
+    padding-top: 0px;
+    overflow: hidden;
+    border-right: .15em solid #344E41;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+*/
+
+/*
+
 .header .cell {
     display:table-cell;
     vertical-align:top;
@@ -37,10 +57,12 @@ h1, h2, h3, h4, h5, h6 {
     width:50%;
     margin: 0 auto;
 }
+
 */
 
 
 /* Hero and Footer Style */
+
 #hero, footer {
     text-align:center;
     background-color: #344E41;
@@ -49,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     border:10px solid #588157;
 }
 
-#hero img {
+#avatar {
     width:15vw;
     max-width:500px;
     min-width:100px;
@@ -64,11 +86,20 @@ h1, h2, h3, h4, h5, h6 {
                 15px 15px 5px rgba(0,0,0,.5);
 }
 
-#hero a{
+#profilePic {
+    width: 150vw;
+    max-width: 60%;
+    min-width: 100px;
+
+    box-shadow: 15px 15px 5px rgba(0,0,0,.5) inset,
+                15px 15px 5px rgba(0,0,0,.5);
+}
+
+#hero a, #footer a{
     color: #DAD7CD;
 }
 
-#hero a:hover, #hero a:active{
+#hero a:hover, #hero a:active, #footer a:hover, #footer a:active{
     padding:0.5rem;
     background-color:#588157;
     border-radius:10px;
@@ -80,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     display:flex;
     flex-direction:column;
     align-items:center;
+    text-align: center;
 }
 
 /* Hobbies Style */
@@ -88,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
     display:flex;
     flex-direction:column;
     align-items:center;
+    text-align: center;
 }
 
 /*
@@ -102,34 +135,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Photo Gallery Style */
 
-#gallery{
-    border:10px solid #588157;
-    text-align:center;
-}
 
-#gallery img{
-    width:50vw;
-    max-width:100%;
-    min-width:100px;
-}
 
-/* Music Genres Style */
 
-#musicgenres {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
+
+
 
 /* Lyrics Style */
 
-
 #lyrics {
+    margin-top: 20px;
     border:10px solid #588157;
     text-align:center;
     display:flex;
     flex-direction:column;
     align-items:center;
+    
 }
 
 /* Blog style */
@@ -138,6 +159,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align:left;
     margin:3em;
 }
+
+/*
 
 #blog p:nth-child(odd)::first-letter{
     clear: both;
@@ -155,21 +178,40 @@ h1, h2, h3, h4, h5, h6 {
     border: 5px double black;
 }
 
+*/
+
+/* Demo Style */
+
+/*
+#demo {
+    background:url("/img/neven-krcmarek-9dTg44Qhx1Q-unsplash.jpg") repeat-x;
+    background-repeat: cover;
+    background-size:cover;
+    
+    display:flex;
+    flex-direction:column;
+
+    height:90vh;
+    width:90%;
+    text-align: center;
+}
+
+*/
 /* Video Style */
 
 #video h2 {
     text-align:center;
 }
 
-#videoWrapper{
+#videoWrapper {
     position:relative;
     padding-bottom:56.25%;
     border:5px solid #588157;
     margin:50px;
 }
 
-#video iframe{
-    display:block;
+#video iframe {
+    display: block;
     position:absolute;
     top:0px;
     left:0px;
@@ -233,9 +275,9 @@ h1, h2, h3, h4, h5, h6 {
         justify-content:center;
         align-items:center;
     }
-    #lit div{
+    #blog div{
         max-width:100%;
-        columns:30rem;
+        columns:20rem;
         text-align:justify;
     }
 }
@@ -276,3 +318,71 @@ h1, h2, h3, h4, h5, h6 {
 
     }
 }
+
+
+/*
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #344E41 }
+}
+
+*/
+
+
+
+
+
+
+
+
+                        #gallery {
+                            display: grid;
+                            gap: 40px;
+                            height: 100vh;
+                            margin: 0;
+                            grid-auto-flow: column;
+                            place-content: center;
+
+                            border:10px solid #588157;
+                            text-align:center;
+                        }
+
+                        #gallery img{
+                            width:50vw;
+                            max-width:100%;
+                            min-width:100px;
+                        }
+
+                        #gallery img {
+                        --color: black; /* the border color */
+                        --border: 10px; /* the border thickness*/
+                        --offset: 20px; /* control the offset*/
+                        --gap: 5px; /* the gap on hover */
+
+                        --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),
+                            var(--color) 0;
+                        --_o: calc(3 * var(--offset));
+                        padding: calc(var(--gap) + var(--border))
+                            calc(var(--gap) + var(--border) + var(--offset))
+                            calc(var(--gap) + var(--border) + var(--offset))
+                            calc(var(--gap) + var(--border));
+                        background: linear-gradient(var(--_c)) var(--_o) var(--_o),
+                            linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+                        background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+                        background-repeat: no-repeat;
+                        filter: grayscale(0.4);
+                        transition: 0.5s;
+                        cursor: pointer;
+                        }
+
+                        #gallery img:hover {
+                        background-position: 0px 0px;
+                        background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+                        filter: grayscale(0);
+                        }

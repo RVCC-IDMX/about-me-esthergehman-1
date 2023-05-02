@@ -131,12 +131,13 @@ label input {
     display: none;
 }
 
+/* 
 label input:checked + .menu {
-    /* 
     box-shadow: 0 0 0 100vh rgba(218, 215, 205);
     border-radius: 0;
-    */
+
 }
+*/
 
 label input:checked + .menu .hamburger {
     transform: rotate(45deg);
@@ -176,9 +177,9 @@ such that no text wraps
         display: flex;
         flex-direction: row;
         justify-content: center;
-        top: 20vh;
+        top: 13rem;
         width: 100vw;
-        height: 60.8px;
+        height: auto;
         padding: 0;
     }
 
