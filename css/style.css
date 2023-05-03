@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align:center;
 }
 
-/* Norway Image Stuff */
+/* Header Style */
 
 .header {
     color: #344E41;
@@ -30,36 +30,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .name {
-    margin: 80px 20px 0px;
+    margin: 0px 20px 0px;
 }
 
-/*
-.name {
-    margin: 80px 20px 0px;
-    padding-top: 0px;
-    overflow: hidden;
-    border-right: .15em solid #344E41;
-    white-space: nowrap;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+.logo {
+    position: absolute;
+    margin-top: 500px;
+
 }
-
-*/
-
-/*
-
-.header .cell {
-    display:table-cell;
-    vertical-align:top;
-}
-
-.header .site-info {
-    width:50%;
-    margin: 0 auto;
-}
-
-*/
-
 
 /* Hero and Footer Style */
 
@@ -112,6 +90,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction:column;
     align-items:center;
     text-align: center;
+    border:10px solid #588157;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 /* Hobbies Style */
@@ -121,25 +102,24 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction:column;
     align-items:center;
     text-align: center;
+    border:10px solid #588157;
+    margin-top: 20px;
+    padding: 10px;
 }
-
-/*
-#hobbies, #bio ul{
-    width:350px;
-    margin-left:auto;
-    margin-right:auto;
-    max-width:350px;
-    min-width:200px;
-}
-**/
 
 /* Photo Gallery Style */
 
+#gallery{
+    border:10px solid #588157;
+    text-align:center;
+    margin-top: 20px;
+}
 
-
-
-
-
+#gallery img{
+    width:50vw;
+    max-width:100%;
+    min-width:100px;
+}
 
 /* Lyrics Style */
 
@@ -150,54 +130,24 @@ h1, h2, h3, h4, h5, h6 {
     display:flex;
     flex-direction:column;
     align-items:center;
-    
+    padding: 10px;
 }
 
 /* Blog style */
 
 #blog {
+    border:10px solid #588157;
     text-align:left;
-    margin:3em;
+    margin-top: 20px;
+    padding: 10px;
 }
 
-/*
-
-#blog p:nth-child(odd)::first-letter{
-    clear: both;
-    color: white;
-    font-size: 230%;
-    padding: .5ex;
-    margin-right: .5ex;
-    font-weight: bold;
-    background-color: #344E41;
-    background-origin: content-box;
-    text-shadow:5px 5px 5px rgba(0,0,0,.5);
-    box-shadow:3px 3px 3px rgba(0,0,0,.5);
-
-    float: left;
-    border: 5px double black;
-}
-
-*/
-
-/* Demo Style */
-
-/*
-#demo {
-    background:url("/img/neven-krcmarek-9dTg44Qhx1Q-unsplash.jpg") repeat-x;
-    background-repeat: cover;
-    background-size:cover;
-    
-    display:flex;
-    flex-direction:column;
-
-    height:90vh;
-    width:90%;
-    text-align: center;
-}
-
-*/
 /* Video Style */
+
+#video {
+    border: 10px solid #588157;
+    margin-top: 20px;
+}
 
 #video h2 {
     text-align:center;
@@ -262,7 +212,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #283b32;
 }
 
-
 /* Media Queries */
 
 @media screen and (min-width:768px) {
@@ -282,11 +231,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media screen and (min-width:1200px){
-    #gallery{
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
-        padding-right:50px;
-    }
     #gallery hr{
         display:none;
     }
@@ -296,6 +240,57 @@ h1, h2, h3, h4, h5, h6 {
     #gallery figure{
         display:block;
     }
+
+    #gallery {
+        display: grid;
+        gap: 40px;
+        height: 100vh;
+        margin: 0;
+        margin-top: 20px;
+        grid-auto-flow: column;
+        place-content: center;
+    
+        border: 10px solid #588157;
+        text-align: center;
+        grid-template-columns:1fr 1fr 1fr;
+        padding-right:50px;
+    }
+    
+    #gallery img {
+        width: 50vw;
+        max-width: 100%;
+        min-width: 100px;
+    }
+    
+    #gallery img {
+        --color: #588157;
+        /* the border color */
+        --border: 10px;
+        /* the border thickness*/
+        --offset: 20px;
+        /* control the offset*/
+        --gap: 5px;
+        /* the gap on hover */
+    
+        --_c: var(--color) var(--border), #588157 0 calc(100% - var(--border)),
+            var(--color) 0;
+        --_o: calc(3 * var(--offset));
+        padding: calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
+        background: linear-gradient(var(--_c)) var(--_o) var(--_o),
+            linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+        background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+        background-repeat: no-repeat;
+        filter: grayscale(0.4);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    #gallery img:hover {
+        background-position: 0px 0px;
+        background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+        filter: grayscale(0);
+    }
+
     #lyrics{
         display:grid;
         grid-template-columns:1fr 1fr 1fr;
@@ -319,71 +314,3 @@ h1, h2, h3, h4, h5, h6 {
 
     }
 }
-
-
-/*
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #344E41 }
-}
-
-*/
-
-
-
-
-
-
-
-
-                        #gallery {
-                            display: grid;
-                            gap: 40px;
-                            height: 100vh;
-                            margin: 0;
-                            grid-auto-flow: column;
-                            place-content: center;
-
-                            border:10px solid #588157;
-                            text-align:center;
-                        }
-
-                        #gallery img{
-                            width:50vw;
-                            max-width:100%;
-                            min-width:100px;
-                        }
-
-                        #gallery img {
-                        --color: #588157; /* the border color */
-                        --border: 10px; /* the border thickness*/
-                        --offset: 20px; /* control the offset*/
-                        --gap: 5px; /* the gap on hover */
-
-                        --_c: var(--color) var(--border), #588157 0 calc(100% - var(--border)),
-                            var(--color) 0;
-                        --_o: calc(3 * var(--offset));
-                        padding: calc(var(--gap) + var(--border))
-                            calc(var(--gap) + var(--border) + var(--offset))
-                            calc(var(--gap) + var(--border) + var(--offset))
-                            calc(var(--gap) + var(--border));
-                        background: linear-gradient(var(--_c)) var(--_o) var(--_o),
-                            linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
-                        background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
-                        background-repeat: no-repeat;
-                        filter: grayscale(0.4);
-                        transition: 0.5s;
-                        cursor: pointer;
-                        }
-
-                        #gallery img:hover {
-                        background-position: 0px 0px;
-                        background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
-                        filter: grayscale(0);
-                        }

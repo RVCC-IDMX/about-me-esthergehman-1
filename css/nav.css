@@ -30,11 +30,7 @@ main {
     overflow: hidden;
 }
 
-/* CHECK */
-
-
 .navbar-list {
-
     width: 70%;
     height: 75vh;
 
@@ -80,9 +76,7 @@ main {
     border-radius: 10px;
 }
 
-/*
-TEST
-*/
+/* Hamburger Icon and Menu */
 
 .menu {
     position: absolute;
@@ -131,14 +125,6 @@ label input {
     display: none;
 }
 
-/* 
-label input:checked + .menu {
-    box-shadow: 0 0 0 100vh rgba(218, 215, 205);
-    border-radius: 0;
-
-}
-*/
-
 label input:checked + .menu .hamburger {
     transform: rotate(45deg);
 }
@@ -162,8 +148,6 @@ label input:checked + .menu + .navbar-list {
 
 /* 
 media query for non-mobile nav bar
-min-width set to width of nav elements 
-such that no text wraps 
 */
 
 @media screen and (min-width:1000px) {
